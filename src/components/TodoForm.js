@@ -13,7 +13,7 @@ const TodoForm = (props) => {
       <button
         onClick={() => {
           if (input !== "") {
-            props.addTodo(input);
+            props.addItem(input);
             setInput("");
           }
         }}

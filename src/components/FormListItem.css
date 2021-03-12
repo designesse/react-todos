@@ -1,0 +1,4 @@
+.FormListItem input {
+  border: 1px solid var(--text-list-color);
+  font-size: inherit;
+}

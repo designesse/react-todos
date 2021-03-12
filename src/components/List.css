@@ -1,0 +1,66 @@
+.List {
+  color: var(--text-list-color);
+}
+
+.List button {
+  background-color: var(--color-neutral);
+  border: none;
+  color: var(--text-list-color-dark);
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+.List button:active {
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
+
+.List button:hover {
+  color: var(--text-list-color);
+}
+
+.List input[type="text"] {
+  color: var(--text-list-color);
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.List li {
+  border-bottom: 5px solid var(--text-list-color-lightest);
+  padding: 15px 0;
+  white-space: nowrap;
+}
+
+.List ul {
+  margin-bottom: var(--margin-s);
+}
+
+.List .buttons-group {
+  float: right;
+}
+
+.List .ellipsis-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.List .ellipsis-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.List .input-wrapper {
+  overflow: hidden;
+}
+
+.List .input-wrapper input {
+  box-sizing: border-box;
+  width: 100%;
+}

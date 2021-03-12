@@ -18,3 +18,7 @@ ul {
   padding: 0;
   text-decoration: none;
 }
+
+.right {
+  float: right;
+}

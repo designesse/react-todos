@@ -1,6 +1,15 @@
 .App {
-  color: #00a787;
-  font-size: 30px;
-  margin: 200px auto;
+  --color-neutral: #fff;
+  --margin-s: 10px;
+  --text-color: #aaa;
+  --text-hover: #ccc;
+  --text-list-color: #00a787;
+  --text-list-color-dark: #006350;
+  --text-list-color-lightest: #ebfffb;
+
+  color: var(--text-color);
+  font-size: 20px;
+  margin: 100px auto;
   max-width: 700px;
+  padding: 0 50px;
 }
