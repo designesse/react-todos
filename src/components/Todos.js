@@ -4,7 +4,12 @@ const Todos = () => {
   return (
     <div>
       <h3>Todos</h3>
-      <List type="todos" typePlural="todos" typeSingular="todo" />
+      <List
+        type="todos"
+        lastId="todosLastId"
+        typePlural="todos"
+        typeSingular="todo"
+      />
     </div>
   );
 };

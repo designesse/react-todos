@@ -5,6 +5,7 @@ import "./List.css";
 
 const List = (props) => {
   const [items, setItems] = useState([]);
+  const [lastId, setLastId] = useState(0);
 
   useEffect(() => {
     setItems(
@@ -12,14 +13,21 @@ const List = (props) => {
         ? JSON.parse(localStorage.getItem(props.type))
         : []
     );
-  }, []);
+    setLastId(
+      localStorage.getItem(props.lastId)
+        ? localStorage.getItem(props.lastId)
+        : 0
+    );
+  }, [props.type, props.lastId]);
 
   useEffect(() => {
     localStorage.setItem(props.type, JSON.stringify(items));
-  }, [items]);
+    localStorage.setItem(props.lastId, lastId);
+  }, [props.type, props.lastId, items, lastId]);
 
   const addItem = (input) => {
-    const newItems = [...items, { name: input }];
+    const newItems = [...items, { id: lastId, name: input }];
+    setLastId(lastId + 1);
     setItems(newItems);
   };
 
@@ -42,7 +50,7 @@ const List = (props) => {
       <ul>
         {items &&
           items.map((todo) => (
-            <li key={todo.name}>
+            <li key={todo.id}>
               <ListItem
                 name={todo.name}
                 deleteItem={deleteItem}
