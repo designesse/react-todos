@@ -1,9 +1,15 @@
+import Button from "./Button";
+
 const ListViewItem = ({ name, setStatus }) => {
   return (
     <div>
       <div className="buttons-group">
-        <button onClick={() => setStatus("edit")}>edit</button>
-        <button onClick={() => setStatus("delete")}>delete</button>
+        <Button name="edit" type="button" onClick={() => setStatus("edit")} />
+        <Button
+          name="delete"
+          type="button"
+          onClick={() => setStatus("delete")}
+        />
       </div>
       <div className="ellipsis-wrapper">
         <div className="ellipsis-text">{name}</div>

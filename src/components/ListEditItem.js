@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const ListEditItem = ({ name, setStatus, updateItem }) => {
   const [nameInput, setNameInput] = useState(name);
@@ -13,14 +14,13 @@ const ListEditItem = ({ name, setStatus, updateItem }) => {
       }}
     >
       <div className="buttons-group">
-        <button type="submit">update</button>
-        <button
+        <Button name="update" type="submit" />
+        <Button
+          name="cancel"
           onClick={() => {
             setStatus("view");
           }}
-        >
-          cancel
-        </button>
+        />
       </div>
       <div className="input-wrapper">
         <input

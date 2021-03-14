@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import FormListItem from "./FormListItem";
 import ListItem from "./ListItem";
+import Button from "./Button";
 import "./List.css";
 
 const List = (props) => {
@@ -60,9 +61,15 @@ const List = (props) => {
           ))}
       </ul>
       <FormListItem addItem={addItem} typeSingular={props.typeSingular} />
-      <button className="right" onClick={() => setItems([])}>
-        Delete all {props.typePlural}
-      </button>
+      {items.length > 0 && (
+        <div className="right">
+          <Button
+            name={`Delete all ${props.typePlural}`}
+            type="submit"
+            onClick={() => setItems([])}
+          />
+        </div>
+      )}
     </div>
   );
 };

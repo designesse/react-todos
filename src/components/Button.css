@@ -1,0 +1,20 @@
+.Button {
+  background-color: var(--color-neutral);
+  border: 1px solid var(--text-list-color-dark);
+  border-radius: 20px;
+  color: var(--text-list-color-dark);
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Button:active {
+  left: 1px;
+  position: relative;
+  top: 1px;
+}
+
+.Button:hover {
+  border: 1px solid var(--text-list-color);
+  color: var(--text-list-color);
+}

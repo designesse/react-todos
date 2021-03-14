@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const ListDeleteItem = ({ name, setStatus, deleteItem }) => {
   return (
     <form
@@ -7,10 +9,10 @@ const ListDeleteItem = ({ name, setStatus, deleteItem }) => {
       }}
     >
       <div className="buttons-group">
-        <button onClick={() => setStatus("view")}>cancel</button>
+        <Button name="cancel" type="button" onClick={() => setStatus("view")} />
       </div>
       <div className="ellipsis-wrapper">
-        <button type="submit">delete</button>
+        <Button name="delete" type="submit" />
         {name}
       </div>
     </form>

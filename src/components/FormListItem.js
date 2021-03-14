@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./FormListItem.css";
+import Button from "./Button";
 
 const FormListItem = (props) => {
   const [input, setInput] = useState("");
@@ -20,7 +21,7 @@ const FormListItem = (props) => {
         placeholder={`Enter a ${props.typeSingular}`}
         required
       />
-      <button type="submit">+</button>
+      <Button name="+" type="submit" />
     </form>
   );
 };
